@@ -1,0 +1,342 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+:root{
+    --Font:#E5E5E5;
+    --blanco:#FFFFFF;
+    --azulObscuro:#0A3871;
+    --gris:#C5C5C5;
+    --grisObscuro:#67808E;
+    --rgba:rgba(0,0,0,0.08);
+    --blancoAzul:#D8DFE8;
+    --azulMedio:#0a38718a;
+    --grisObscuroNegro:#343A40;
+    --grisMedioObscuro:#495057;
+    --grisSuave:#F3F5FC;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    background: var(--blanco);
+}
+
+::selection{
+    background: var(--azulObscuro);
+    color: var(--blanco);
+}
+
+body{
+    height: 100%;
+}
+
+img{
+    max-width: 100%;
+}
+
+header{
+    position: absolute;
+    margin: 40px 0px 0px 40px;
+}
+
+header .logo{
+    display: flex;
+    align-items: flex-start;
+    width: 120px;
+    height: 48px;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    background: var(--grisSuave);
+    background-size: cover;
+    background-position: center;
+}
+
+.encriptador{
+    width: 60%;
+    margin: 168px 0px 0px 140px;
+    background: transparent;
+}
+
+.encriptar{
+    width: 660px;
+    height: 288px;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 48px;
+    outline: none;
+    border: 1px solid var(--gris);
+    border-radius: 15px;
+    resize: none;
+    text-transform: lowercase;
+}
+
+.encriptar::placeholder,:focus{
+    color: var(--azulObscuro);
+}
+
+.avisoEncriptador{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    gap: 8px;
+    position: absolute;
+    top: 500px;
+}
+
+.textoAviso{
+    width: 100%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    opacity: 0.8;
+    color: var(--grisObscuro);
+}
+
+.contenedorTexto{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 8px;
+    position: absolute;
+    top: 526px;
+}
+
+.botonEncriptar{
+    width: 328px;
+    height: 67px;
+    padding: 24px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: var(--blanco);
+    background: var(--azulObscuro);
+    border: 1px solid var(--azulObscuro);
+    border-radius: 24px;
+    cursor: pointer;
+    box-shadow: 0px 20px 29px -5px var(--rgba); 
+}
+
+.botonEncriptar:active{
+    box-shadow: inset 2px 2px 4px var(--Font),
+    inset -3px -4px 8px var(--azulObscuro);
+    color: var(--blancoAzul);
+}
+
+.botonDesencriptar{
+    width: 328px;
+    height: 67px;
+    padding: 24px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: var(--azulObscuro);
+    background: var(--blancoAzul);
+    border: 1px solid var(--azulObscuro);
+    border-radius: 24px;
+    cursor: pointer;
+    box-shadow: 0px 20px 29px -5px var(--rgba); 
+}
+
+.botonCopiar:active,
+.botonDesencriptar:active{
+    box-shadow: inset 2px 2px 4px var(--azulObscuro),
+    inset -3px -4px 8px var(--Font);
+    color: var(--azulMedio);
+}
+
+.tarjeta{
+    width: 270px;
+    height: 580px;
+    background: var(--Font);
+    box-shadow: 10px 24px 32px -8px var(--grisObscuroNegro);
+    position: relative;
+    margin-top: 40px;
+    border-radius: 32px;
+    text-align: center;
+}
+
+.contenedorTarjeta{
+    width: 250px;
+    margin: auto;
+    margin-top: 50%;
+    background: var(--Font);
+}
+
+.figura{
+    background: var(--Font);
+}
+
+.textoA{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 120%;
+    text-align: center;
+    color: var(--grisObscuroNegro);
+    background: var(--Font);
+}
+
+.textoB{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    text-align: center;
+    color: var(--grisObscuro);
+    background: var(--Font);
+}
+
+.evaluar{
+    width: 100%;
+    height: 485px;
+    position: absolute;
+    padding: 20px;
+    top: 0;
+    left: 0;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: var(--grisMedioObscuro);
+    background: transparent;
+    border-top-right-radius: 32px;
+    border-top-left-radius: 32px;
+    border: none;
+    resize: none;
+}
+
+.evaluar:focus{
+    outline: none;
+}
+
+.botonCopiar{
+    width: 224px;
+    height: 67px;
+    margin: 23px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+    padding: 24px;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    background: var(--blancoAzul);
+    border: 1px solid var(--azulObscuro);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.botonEncriptar:hover,
+.botonDesencriptar:hover,
+.botonCopiar:hover{
+    transform: scale(0.97);
+}
+footer{
+    margin-top: 10px;
+    padding: 15px;
+    border-top: 2px solid var(--Font);
+    color: var(--grisObscuroNegro);
+    text-align: center;
+    height: 5px;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--azulObscuro);
+}
+
+@media(max-width: 1300px){
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .encriptador{
+        margin: 168px 0px 0px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .contenedorTexto{
+        display: flex;
+        align-items: center;
+        position: inherit;
+    }
+
+    .avisoEncriptador{
+        position: inherit;
+        margin: 15px;
+    }   
+    
+    .tarjeta{
+        width: 665px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .contenedorTarjeta{
+        display: block;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: absolute;
+        bottom: 20%;
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    .figura{
+        display: none;
+    }
+
+    .botonCopiar{
+        position: inherit;
+        width: 100%;
+    }
+
+    .evaluar{
+        width: 100%;
+        height: 210px;
+        padding: 10px;
+    }
+}
+
+
+@media(max-width: 768px){
+    
+    header .logo{
+        width: 100%;
+        background: var(--blanco);
+        padding: 2px;
+    }
+
+    .encriptar{
+        width:  90%;
+        font-size: 24px;
+    }
+
+    .contenedorTexto{
+        display: grid;
+        gap: 21px;
+    }
+
+    .tarjeta{
+        width: 90%;
+    }
+
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge Encriptador</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <header>
+        <a href="#" rel="">
+            <img src="./images/logo.png" alt="Logo Alura Latam" class="logo">
+        </a>    
+    </header>
+    <main>
+        <section class="encriptador">
+            <textarea class="encriptar" placeholder="Ingrese el texto aquí"></textarea>
+            <div class="avisoEncriptador">
+                <img src="./images/exclamacion.png" alt="Imagen Aviso" class="imagenAviso">
+                <p class="textoAviso">Solo letras minúsculas y sin acentos</p>
+            </div>
+            <div class="contenedorTexto">
+                <button type="submit" class="botonEncriptar" onclick="botonEncriptar.addEventListener()">Encriptar</button>
+                <button type="submit" class="botonDesencriptar" onclick="botonDesencriptar.addEventListener()">Desencriptar</button>
+            </div>
+        </section>
+        <section class="tarjeta">
+           <div class="contenedorTarjeta">
+                <img src="./images/figura.png" alt="figura" class="figura">
+                <p class="textoA">Ningún mensaje fue encontrado</p>
+                <p class="textoB">Ingresa el texto que desees encriptar o desencriptar.</p>
+           </div>
+           <textarea type="mensaje" class="evaluar" readonly></textarea>
+           <button type="submit" class="botonCopiar" onclick="botonCopiar.addEventListener()">Copiar</button>
+         </section>  
+    </main>
+    <footer>
+        <p class="textoFooter">Challenge Encriptador de Texto para Alura Latam</p>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>
